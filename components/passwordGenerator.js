@@ -31,14 +31,14 @@ export default function PasswordGenerator() {
 
     useEffect(() => {
         passwordGenerator();
-    }, [length, numberAllowed, charAllowed])
+    }, [length, numberAllowed, charAllowed, passwordGenerator])
     return (
         <div>
             <div className='full-width text-center p-10 z-shadow' style={{ width: "600px" }}>
                 <h1>Password Generator</h1>
                 <div className='mt-10 d-flex'>
                     <TextField size="small"
-                        value={password}  inputRef={passwordRef}
+                        value={password} inputRef={passwordRef}
                         fullWidth />
                     <Button variant='contained' className='font-bold'
                         size="large"
